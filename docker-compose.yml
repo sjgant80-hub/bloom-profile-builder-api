@@ -1,12 +1,8 @@
 services:
   bloom-profile-builder-api:
     build: .
-    image: ai-native-solutions/bloom-profile-builder-api:1.0.0
-    container_name: bloom-profile-builder-api
-    restart: unless-stopped
     ports:
-      - "4210:4210"
+      - "3000:3000"
     environment:
-      NODE_ENV: production
-      HOST: 0.0.0.0
-      PORT: 4210
+      PORT: "3000"
+    restart: unless-stopped

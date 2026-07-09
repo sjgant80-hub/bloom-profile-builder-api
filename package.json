@@ -1,40 +1,25 @@
 {
   "name": "@ai-native-solutions/bloom-profile-builder-api",
   "version": "1.0.0",
+  "description": "bloom-profile-builder HTTP API · Express wrapper around @ai-native-solutions/bloom-profile-builder-sdk",
   "type": "module",
-  "description": "HTTP REST proxy for @ai-native-solutions/bloom-profile-builder-sdk - the sovereign 21-probe calibration engine, F(S⃗) fold-number, κ classifier, profile compute.",
-  "main": "./server.mjs",
-  "bin": {
-    "bloom-profile-builder-api": "./server.mjs"
-  },
-  "files": ["server.mjs", "Dockerfile", "docker-compose.yml", "README.md", "LICENSE"],
+  "main": "src/index.js",
+  "files": ["src", "README.md", "LICENSE", "Dockerfile", "docker-compose.yml"],
   "scripts": {
-    "start": "node server.mjs"
+    "start": "node src/index.js"
   },
-  "dependencies": {
-    "@ai-native-solutions/bloom-profile-builder-sdk": "^1.0.0"
-  },
-  "keywords": [
-    "bloom-profile-builder",
-    "bloom",
-    "calibration",
-    "http",
-    "rest",
-    "api",
-    "sovereign",
-    "ai-native-solutions"
-  ],
+  "keywords": ["bloom-profile-builder", "api", "http", "express", "ai-native-solutions"],
   "author": "AI-Native Solutions",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/sjgant80-hub/bloom-profile-builder-api.git"
   },
-  "homepage": "https://github.com/sjgant80-hub/bloom-profile-builder-api",
+  "dependencies": {
+    "express": "^4.19.0",
+    "@ai-native-solutions/bloom-profile-builder-sdk": "^1.0.0"
+  },
   "publishConfig": {
     "access": "public"
-  },
-  "engines": {
-    "node": ">=18"
   }
 }
